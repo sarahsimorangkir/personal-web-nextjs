@@ -1,11 +1,10 @@
 :root {
-  --primaryColor : #2280C4;
+  --primaryColor : #010226;
 }
 
-*{
-  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-  "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-  "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+* {
+  /* font-family: Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+  font-family: "geistSansFont", Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, arial;
   box-sizing: border-box;
 }
 

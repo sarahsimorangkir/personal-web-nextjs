@@ -1,0 +1,38 @@
+.Home{
+    height: 100vh;
+    background-color: #010226;
+    margin: -42px 0 0 0;
+    padding: 16px 24px;
+    h1,
+    p{
+        color: #ffffff;
+    }
+}
+
+.newestPost{
+    margin: 0px 25px ;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .cardGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}

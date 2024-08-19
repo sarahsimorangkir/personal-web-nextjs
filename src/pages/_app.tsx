@@ -4,7 +4,6 @@ import { NextPage } from "next";
 import type { AppProps } from "next/app";
 import React from "react";
 
-
 type ComponentWithLayout = NextPage & {
   getLayout?: (page: React.ReactElement)=> React.ReactNode;
 }
