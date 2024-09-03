@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import styles from "./index.module.scss";
+import Link from "next/link";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -11,11 +12,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <header
         style={{
           backgroundColor: "primary",
+          fontSize: "18px",
           width: "30%",
           height: "30px",
-          top: "10",
           position: "sticky",
-          margin: "0 auto",
+          top: "10px",
+          right: "15px",
+          margin: "0 0 100px auto",
         }}
       >
         <ul className={styles.menu}>
@@ -24,16 +27,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <a href="/">SarahOYS <span>.</span></a>
           </li> */}
           <li>
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
+          </li>
+          <li>  
+            <Link href="/github-projects">Projects</Link>
           </li>
           <li>
-            <a href="/projects">Projects</a>
+            <Link href="/posts">Blog</Link>
           </li>
           <li>
-            <a href="/blog">Blog</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
+            <Link href="/about">About</Link>
           </li>
         </ul>
       </header>

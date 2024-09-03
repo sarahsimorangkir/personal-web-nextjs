@@ -1,7 +1,6 @@
 .Home{
     height: 100vh;
     background-color: #010226;
-    margin: -42px 0 0 0;
     padding: 16px 24px;
     h1,
     p{
@@ -10,13 +9,14 @@
 }
 
 .newestPost{
-    margin: 0px 25px ;
+    color: #ffffff;
 }
 
 .cardGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  color: black;
 }
 
 @media (max-width: 1200px) {
