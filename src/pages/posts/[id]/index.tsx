@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import PostCard from "@/components/PostCard";
 import styles from "../index.module.scss";
 import Image from "next/image";

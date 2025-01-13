@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import styles from "./index.module.scss";
 import Link from "next/link";
 
@@ -12,33 +12,30 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <header
         style={{
           backgroundColor: "primary",
-          fontSize: "18px",
-          width: "30%",
-          height: "30px",
+          fontSize: "20px",
+          width: "100%",
           position: "sticky",
           top: "10px",
-          right: "15px",
-          margin: "0 0 100px auto",
+          right: "0",
+          margin: "0 0 50px 0",
         }}
       >
-        <ul className={styles.menu}>
-
-          {/* <li>
-          <a href="/">SarahOYS <span>.</span></a>
-          </li> */}
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>  
-            <Link href="/github-projects">Projects</Link>
-          </li>
-          <li>
-            <Link href="/posts">Blog</Link>
-          </li>
-          <li>
-            <Link href="/about">About</Link>
-          </li>
-        </ul>
+        <div className={styles.menuContainer}>
+          <ul className={styles.menu}>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>  
+              <Link href="/github-projects">Projects</Link>
+            </li>
+            <li>
+              <Link href="/posts">Blog</Link>
+            </li>
+            <li>
+              <Link href="/about">About</Link>
+            </li>
+          </ul>
+        </div>
       </header>
       {children}
     </div>
