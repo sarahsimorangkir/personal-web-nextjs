@@ -1,3 +1,5 @@
+$primary-color: #4ade80;
+
 .Home{
     height: 100vh;
     background-color: #1a1a1a;
@@ -9,14 +11,14 @@
 }
 
 .newestPost{
-    color: #ffffff;
+    color: $primary-color;
 }
 
 .cardGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  color: black;
+  color: black; 
 }
 
 @media (max-width: 1200px) {

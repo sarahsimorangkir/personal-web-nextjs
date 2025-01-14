@@ -42,10 +42,10 @@ export default function Home(props: Props) {
 
       <div className={styles.newestPost}>
         <h2>Newest Post</h2>
-        <div>
+        <div className={styles.cardGrid}>
           {postData.map(({ title, summary, image, id, date }) => {
             return (
-              <div key={id} className={styles.cardGrid}>
+              <div key={id}>
                 <PostCard
                   title={title}
                   date={date}
