@@ -28,7 +28,7 @@ const PostCard = (props: Props) => {
       <div className={styles.cardContent}>
       <h2>{title}</h2>
       <p>{summary}</p>
-      {/* <p>{date}</p> */}
+      <p>{date}</p>
       </div>
     </Link>
     </section>

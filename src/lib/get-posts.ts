@@ -11,15 +11,10 @@ const getPostData =({ limit=0 })=>{
     const id = filename.replace(/\.md$/, "");
     
     const fullPath = path.join(postDirectory, filename)
-    console.log("fullPath",fullPath);
 
     const fileContents = fs.readFileSync(fullPath, "utf8")
-    console.log({fileContents})
 
     const matterFile = matter(fileContents);
-    console.log("aft matter", matterFile);
-
-    console.log("filenamesfile",{fileNames})
 
     return{
       id,

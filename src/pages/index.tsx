@@ -22,7 +22,6 @@ interface Props {
 
 export default function Home(props: Props) {
   const { postData } = props;
-  console.log(postData);
   return (
     <div className={styles.Home}>
       <h1>Welcome to my personal web!</h1>
@@ -64,7 +63,6 @@ export default function Home(props: Props) {
 
 export function getStaticProps() {
   const postData = getPostData({ limit: 0 });
-  console.log("postData", postData);
   return {
     props: {
       postData,
