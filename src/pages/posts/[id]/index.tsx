@@ -5,6 +5,7 @@ import Image from "next/image";
 import getPostDetailData from "@/lib/get-posts-detail";
 import getPostData from "@/lib/get-posts";
 import Markdown from "markdown-to-jsx";
+import { notFound } from "next/navigation";
 
 interface Props {
   id: string;
@@ -49,6 +50,8 @@ export function getStaticProps(context: any) {
     props: {
       ...post,
     },
+    //@ts-expect-error
+    notFound: Boolean(post.deprecated),
   };
 }
 

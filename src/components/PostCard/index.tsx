@@ -16,7 +16,7 @@ const PostCard = (props: Props) => {
     <Link href={url}>
       <div className={styles.imageWrapper}>
         <Image
-          src={thumbnail}
+          src={thumbnail} 
           style={{ objectFit: "cover" }}
           alt={title}
           width={320}
@@ -28,7 +28,7 @@ const PostCard = (props: Props) => {
       <div className={styles.cardContent}>
       <h2>{title}</h2>
       <p>{summary}</p>
-      <p>{date}</p>
+      <h5>{date}</h5>
       </div>
     </Link>
     </section>

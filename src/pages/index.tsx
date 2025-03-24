@@ -22,6 +22,7 @@ interface Props {
 
 export default function Home(props: Props) {
   const { postData } = props;
+
   return (
     <div className={styles.Home}>
       <h1>Welcome to my personal web!</h1>
@@ -40,7 +41,7 @@ export default function Home(props: Props) {
       </div>
 
       <div className={styles.newestPost}>
-        <h2>Newest Post</h2>
+        <h2>Latest Post</h2>
         <div className={styles.cardGrid}>
           {postData.map(({ title, summary, image, id, date }) => {
             return (

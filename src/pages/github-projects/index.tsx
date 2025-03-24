@@ -1,37 +1,52 @@
 import React from "react";
-import { data } from "../../data/data";
-import styles from "./index.module.scss"; 
+import Link from "next/link";
 import Image from "next/image";
+import { data } from "../../data/data";
+import styles from "./index.module.scss";
 
 const GithubPage = () => {
   return (
     <div className={styles.projectsContainer}>
       <h1 className={styles.title}>Projects</h1>
-      <p className={styles.subtitle}>Showcase of my works on frontend development.</p>
+      <p className={styles.subtitle}>
+        Showcase of my works on web development.
+      </p>
+
       <div className={styles.projectGrid}>
-        {data.map((project, index) => (
-          <div className={styles.projectCard} key={index}>
-            <h2 className={styles.projectTitle}>{project.name}</h2>
-            <p className={styles.projectDescription}>{project.description}</p>
-            <div className={styles.techStack}>
-            {project.stack.split(", ").map((tech, i) => (
-              <span key={i} className={styles.techIcon}>
-                {tech}
-              </span>
-            ))}
+        {data.length > 0 ? (
+          data.map(({ id, name, description, stack, image }, index) => (
+            <div className={styles.projectCard} key={id || index}>
+              <h2 className={styles.projectTitle}>{name}</h2>
+              <p className={styles.projectDescription}>{description}</p>
+
+              <div className={styles.techStack}>
+                {Array.isArray(stack)
+                  ? stack
+                  : stack.split(", ").map((tech, i) => (
+                      <span key={i} className={styles.techIcon}>
+                        {tech}
+                      </span>
+                    ))}
+              </div>
+
+              <div className={styles.projectImageContainer}>
+                <Image
+                  src={image}
+                  alt={name}
+                  layout="fill"
+                  objectFit="cover"
+                  className={styles.projectImage}
+                />
+              </div>
+
+              <Link href="#" className={styles.seeMore}>
+                See more →
+              </Link>
             </div>
-            <div className={styles.projectImageContainer}>
-              <Image
-                src={project.image}
-                alt={project.name}
-                layout="fill"
-                objectFit="cover"
-                className={styles.projectImage}
-              />
-            </div>
-            <a href="#" className={styles.seeMore}>See more →</a>
-          </div>
-        ))}
+          ))
+        ) : (
+          <p className={styles.noData}>No projects available.</p>
+        )}
       </div>
     </div>
   );
