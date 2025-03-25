@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./index.module.scss";
 import Link from "next/link";
+import { useEffect } from "react";
 
 interface Props {
   title: string;
@@ -11,6 +12,11 @@ interface Props {
 }
 const PostCard = (props: Props) => {
   const { title, summary, thumbnail, url, date } = props;
+  // const test = {};
+  // useEffect(()=>{
+  //   test.map((item: any) => item);
+  // })
+
   return (
     <section className={styles.container}>
     <Link href={url}>

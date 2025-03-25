@@ -3,6 +3,8 @@ import PostCard from "@/components/PostCard";
 import styles from "./index.module.scss";
 import Image from "next/image";
 import getPostData from "@/lib/get-posts";
+import ErrorBoundary from "@/components/ErrorBoundary";
+import ErrorPostCard from "@/components/PostCard/ErrorPostCard";
 // import { gsap } from "gsap";
 
 // gsap.registerPlugin(MotionPathPlugin,ScrollToPlugin, TextPlugin);
@@ -46,6 +48,7 @@ export default function Home(props: Props) {
           {postData.map(({ title, summary, image, id, date }) => {
             return (
               <div key={id}>
+                {/* <ErrorBoundary key={id} fallback={<ErrorPostCard/>}> */}
                 <PostCard
                   title={title}
                   date={date}
@@ -53,6 +56,7 @@ export default function Home(props: Props) {
                   thumbnail={image}
                   url={`/posts/${id}`}
                 />
+              {/* </ErrorBoundary> */}
               </div>
             );
           })}
