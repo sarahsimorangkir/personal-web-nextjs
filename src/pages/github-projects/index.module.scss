@@ -1,12 +1,10 @@
-@import '../index.module.scss'; 
+@import '../index.module.scss';
 
 .projectsContainer {
   background-color: $secondary-color;
   color: #ffffff;
   padding: 2rem;
 }
-
-
 
 .subtitle {
   font-size: 1.1rem;
@@ -31,11 +29,13 @@
 .projectTitle {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 .projectDescription {
   font-size: 1rem;
   margin-bottom: 1rem;
+  color: #dddddd;
 }
 
 .techStack {
@@ -50,14 +50,9 @@
   color: #ffffff;
   padding: 0.3rem 0.6rem;
   border-radius: 15px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   font-size: 0.8rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
   white-space: nowrap;
-  max-width: 150px; 
+  max-width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -71,15 +66,24 @@
 
 .projectImage {
   border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .seeMore {
   color: #4ade80;
   text-decoration: none;
   font-weight: bold;
-  align-self: flex-start;
+  transition: text-decoration 0.2s ease-in-out;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-.seeMore:hover {
-  text-decoration: underline;
+.noData {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff5555;
 }

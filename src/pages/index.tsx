@@ -7,7 +7,6 @@ import ErrorBoundary from "@/components/ErrorBoundary";
 import ErrorPostCard from "@/components/PostCard/ErrorPostCard";
 import Head from "next/head";
 import SplashCursor from "@/components/ReactBits/SplashCursor/SplashCursor";
-import Particles from "@/components/ReactBits/Particles/Particles";
 // import { gsap } from "gsap";
 
 // gsap.registerPlugin(MotionPathPlugin,ScrollToPlugin, TextPlugin);

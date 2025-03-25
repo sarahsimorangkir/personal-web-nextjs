@@ -5,6 +5,7 @@ import { data } from "../../data/data";
 import styles from "./index.module.scss";
 import Head from "next/head";
 import GradientText from "@/components/ReactBits/GradientText/GradientText";
+import ShinyText from "@/components/ReactBits/ShinyText/ShinyText";
 
 const GithubPage = () => {
   return (
