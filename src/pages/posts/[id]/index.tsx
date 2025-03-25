@@ -1,11 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
-import PostCard from "@/components/PostCard";
 import styles from "../index.module.scss";
 import Image from "next/image";
 import getPostDetailData from "@/lib/get-posts-detail";
 import getPostData from "@/lib/get-posts";
 import Markdown from "markdown-to-jsx";
-import { notFound } from "next/navigation";
+import Head from "next/head";
 
 interface Props {
   id: string;
@@ -19,7 +18,14 @@ interface Props {
 export default function PostDetailPage(props: Props) {
   const { title, summary, image, content } = props;
   return (
-    <div>
+    <>
+      <Head>
+        <title>Sarah&apos;s Web - Post Detail</title>
+        <meta
+          name="description"
+          content={summary}
+        />
+      </Head>
       <div className={styles.PostDetailPage}>
         <h1>{title}</h1>
         <p>
@@ -40,7 +46,7 @@ export default function PostDetailPage(props: Props) {
           <Markdown>{content}</Markdown>
         </p>
       </div>
-    </div>
+    </>
   );
 }
 

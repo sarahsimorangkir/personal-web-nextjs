@@ -5,6 +5,7 @@ import Image from "next/image";
 import getPostData from "@/lib/get-posts";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import ErrorPostCard from "@/components/PostCard/ErrorPostCard";
+import Head from "next/head";
 // import { gsap } from "gsap";
 
 // gsap.registerPlugin(MotionPathPlugin,ScrollToPlugin, TextPlugin);
@@ -26,6 +27,11 @@ export default function Home(props: Props) {
   const { postData } = props;
 
   return (
+    <>
+   <Head>
+    <title>Sarah's Web - Homepage</title>
+    <meta name="description" content="This is where i share my works, thoughts, and more"/>
+   </Head>
     <div className={styles.Home}>
       <h1>Welcome to my personal web!</h1>
       <p>
@@ -63,6 +69,7 @@ export default function Home(props: Props) {
         </div>
       </div>
     </div>
+  </>
   );
 }
 
