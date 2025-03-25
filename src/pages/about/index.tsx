@@ -1,3 +1,4 @@
+import GradientText from "@/components/ReactBits/GradientText/GradientText";
 import Head from "next/head";
 import React from "react";
 
@@ -11,7 +12,14 @@ const About = () => {
           content="About me"
         />
       </Head>
-      <div>About Me</div>
+      <GradientText
+        colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+        animationSpeed={3}
+        showBorder={false}
+        className="custom-class"
+      >
+        About Me
+      </GradientText>
     </>
   );
 };

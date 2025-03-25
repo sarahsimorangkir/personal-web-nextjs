@@ -4,6 +4,7 @@ import Image from "next/image";
 import { data } from "../../data/data";
 import styles from "./index.module.scss";
 import Head from "next/head";
+import GradientText from "@/components/ReactBits/GradientText/GradientText";
 
 const GithubPage = () => {
   return (
@@ -13,7 +14,14 @@ const GithubPage = () => {
         <meta name="description" content="This is where i share my projects" />
       </Head>
       <div className={styles.projectsContainer}>
-        <h1 className={styles.title}>Projects</h1>
+        <GradientText
+          colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+          animationSpeed={3}
+          showBorder={false}
+          className="custom-class"
+        >
+          My Projects
+        </GradientText>
         <p className={styles.subtitle}>
           Showcase of my works on web development.
         </p>
