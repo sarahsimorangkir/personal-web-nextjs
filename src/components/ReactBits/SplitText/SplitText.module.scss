@@ -1,0 +1,37 @@
+.splitText {
+    font-size: 1.5rem; 
+    font-weight: 600; 
+    text-align: center;
+    display: inline-block;
+  
+    span {
+      display: inline-block;
+      opacity: 0;
+      transform: translate3d(0, 50px, 0);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+  
+    &.animate {
+      span {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  
+    &.easeIn span {
+      transition-timing-function: ease-in;
+    }
+  
+    &.easeOut span {
+      transition-timing-function: ease-out;
+    }
+  
+    &.easeInOut span {
+      transition-timing-function: ease-in-out;
+    }
+  
+    &.cubic span {
+      transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+    }
+  }
+  
