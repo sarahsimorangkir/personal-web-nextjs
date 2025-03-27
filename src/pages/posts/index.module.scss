@@ -38,7 +38,7 @@
   box-shadow: none;
   width: 100%;
   height: 100%;
-  background-color: $secondary-color;
+  background-color: var(--secondaryColor);
 
   & > input {
     width: 100%;

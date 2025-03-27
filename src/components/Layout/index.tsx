@@ -1,41 +1,38 @@
 import React from "react";
+import { useRouter } from "next/router";
 import styles from "./index.module.scss";
 import Link from "next/link";
+
+const NAV_ITEMS = [
+  { href: "/", label: "Home" },
+  { href: "/posts", label: "Blog" },
+  { href: "/github-projects", label: "Projects" },
+  { href: "/about", label: "About" },
+];
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const router = useRouter();
+
   return (
     <div>
-      <header
-        style={{
-          backgroundColor: "primary",
-          fontSize: "20px",
-          width: "100%",
-          position: "sticky",
-          top: "10px",
-          right: "0",
-          margin: "0 0 50px 0",
-        }}
-      >
-        <div className={styles.menuContainer}>
-          <ul className={styles.menu}>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>  
-              <Link href="/github-projects">Projects</Link>
-            </li>
-            <li>
-              <Link href="/posts">Blog</Link>
-            </li>
-            <li>
-              <Link href="/about">About</Link>
-            </li>
-          </ul>
-        </div>
+      <header className={styles.header}>
+        <nav className={styles.navbar}>
+          {NAV_ITEMS.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`${styles.navItem} ${
+                router.pathname === href ? styles.active : ""
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
       </header>
       {children}
     </div>

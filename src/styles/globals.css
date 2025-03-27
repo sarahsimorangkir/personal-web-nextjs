@@ -1,6 +1,6 @@
 :root {
-  --primaryColor : #1a1a1a;
-  --secondaryColor : #4ade80;
+  --primaryColor :  #4ade80;
+  --secondaryColor : #1a1a1a;
 }
 
 * {
@@ -11,7 +11,7 @@
 
 body{
   margin: 50px;
-  background-color: var(--primaryColor);
+  background-color: var(--secondaryColor);
   color: white;
 }
 

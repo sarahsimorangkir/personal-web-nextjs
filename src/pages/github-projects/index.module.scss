@@ -1,7 +1,7 @@
 @import '../index.module.scss';
 
 .projectsContainer {
-  background-color: $secondary-color;
+  background-color: var(--secondaryColor);
   color: #ffffff;
   padding: 2rem;
 }
