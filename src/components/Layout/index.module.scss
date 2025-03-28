@@ -1,14 +1,25 @@
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 50%;
   width: fit-content; 
+  transform: translateX(-50%);
   max-width: 90%; 
   z-index: 100;
   background-color: #292828;
   padding: 5px;
   border: 1px solid #3c3d3d;
   border-radius: 10px;
-  margin: 0 auto; 
+  transition: top 0.3s ease-in-out;
+  margin-top: 20px;
+
+  &.hidden{
+    top: -100px;
+  }
+  
+  &.visible{
+    top: 0;
+  }
 }
 
 .navbar {

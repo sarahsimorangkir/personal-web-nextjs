@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import styles from "./index.module.scss";
 import Link from "next/link";
@@ -16,10 +16,33 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const router = useRouter();
+  const [showHeader, setShowHeader] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(()=>{
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const pageHeight = window.innerHeight;
+
+      if(currentScrollY < pageHeight){
+        setShowHeader(true);
+      }else if(currentScrollY < lastScrollY.current){
+        setShowHeader(true)
+      }else{
+        setShowHeader(false)
+      }
+      lastScrollY.current = currentScrollY
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, []);
+
+
 
   return (
     <div>
-      <header className={styles.header}>
+      <header className={`${styles.header} ${showHeader ? styles.visible : styles.hidden}`}>
         <nav className={styles.navbar}>
           {NAV_ITEMS.map(({ href, label }) => (
             <Link
