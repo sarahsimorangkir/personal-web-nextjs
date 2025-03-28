@@ -1,19 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
 import PostCard from "@/components/PostCard";
 import styles from "./index.module.scss";
-import Image from "next/image";
 import getPostData from "@/lib/get-posts";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import ErrorPostCard from "@/components/PostCard/ErrorPostCard";
 import Head from "next/head";
-import SplashCursor from "@/components/ReactBits/SplashCursor/SplashCursor";
-import SplitText from "@/components/ReactBits/SplitText/SplitText";
-import TrueFocus from "@/components/ReactBits/TrueFocus/TrueFocus";
-import ShinyText from "@/components/ReactBits/ShinyText/ShinyText";
-
-// import { gsap } from "gsap";
-
-// gsap.registerPlugin(MotionPathPlugin,ScrollToPlugin, TextPlugin);
+import {
+  SplashCursor,
+  SplitText,
+  TrueFocus,
+  ShinyText,
+  GradientText,
+} from "@/components/ReactBits";
 
 interface PostData {
   id: string;
@@ -75,7 +73,14 @@ export default function Home(props: Props) {
         </div>
 
         <div className={styles.newestPost}>
-          <h2>Latest Post</h2>
+          <GradientText
+            colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+            animationSpeed={3}
+            showBorder={false}
+            className="custom-class"
+          >
+            Latest Posts
+          </GradientText>
           <div className={styles.cardGrid}>
             {postData.map(({ title, summary, image, id, date }) => (
               <div key={id}>

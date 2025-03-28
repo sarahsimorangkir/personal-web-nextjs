@@ -4,10 +4,10 @@ import Image from "next/image";
 import { data } from "../../data/data";
 import styles from "./index.module.scss";
 import Head from "next/head";
-import GradientText from "@/components/ReactBits/GradientText/GradientText";
-import ShinyText from "@/components/ReactBits/ShinyText/ShinyText";
+import { GradientText } from "@/components/ReactBits";
 
-const GithubPage = () => {
+
+const Projects = () => {
   return (
     <>
       <Head>
@@ -68,4 +68,4 @@ const GithubPage = () => {
   );
 };
 
-export default GithubPage;
+export default Projects;

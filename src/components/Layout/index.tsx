@@ -6,7 +6,7 @@ import Link from "next/link";
 const NAV_ITEMS = [
   { href: "/", label: "Home" },
   { href: "/posts", label: "Blog" },
-  { href: "/github-projects", label: "Projects" },
+  { href: "/projects", label: "Projects" },
   { href: "/about", label: "About" },
 ];
 
@@ -37,8 +37,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll)
   }, []);
-
-
 
   return (
     <div>

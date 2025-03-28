@@ -31,14 +31,16 @@ $primary-color: #4ade80;
 
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   color: black;
+  justify-content: center;
+  padding: 0 40px;
 }
 
 @media (max-width: 1200px) {
   .cardGrid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
