@@ -3,6 +3,7 @@ import styles from "./index.module.scss";
 import Head from "next/head";
 import React from "react";
 import Image from "next/image";
+import TechStack from "@/components/TechStack";
 
 const About = () => {
   return (
@@ -46,11 +47,11 @@ const About = () => {
                   <p
                     style={{
                       fontWeight: 900,
-                      fontSize: "3rem",
+                      fontSize: "1.5rem",
                       color: "#ffffff",
                     }}
                   >
-                    Hey!
+                    Thanks for Visiting!
                   </p>
                 </div>
               }
@@ -84,47 +85,7 @@ const About = () => {
               I hope the posts I share not only help me, but also support others
               who are learning as well.
             </p>
-            <div className={styles.TechStack}>
-              <p>Here are my current favorite tech stack:</p>
-              <div className={styles.TechIcons}>
-                <Image
-                  src="/icons/reactjs.png"
-                  alt="React"
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  src="/icons/nextjs.svg"
-                  alt="Next.js"
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  src="/icons/nodejs.svg"
-                  alt="Node.js"
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  src="/icons/typescript.svg"
-                  alt="TypeScript"
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  src="/icons/graphql.png"
-                  alt="GraphQL"
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  src="/icons/tailwind.svg"
-                  alt="Tailwind CSS"
-                  width={40}
-                  height={40}
-                />
-              </div>
-            </div>
+            <TechStack/>
           </div>
         </div>
         <div className={styles.Contact}>
