@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import styles from "./index.module.scss";
 import Link from "next/link";
+import Footer from "../Footer";
 
 const NAV_ITEMS = [
   { href: "/", label: "Home" },
@@ -56,6 +57,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </nav>
       </header>
       {children}
+      <Footer />
     </div>
   );
 };

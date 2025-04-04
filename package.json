@@ -12,7 +12,7 @@
     "@react-spring/web": "^9.7.5",
     "framer-motion": "^12.6.0",
     "gray-matter": "^4.0.3",
-    "gsap": "^3.12.5",
+    "gsap": "^3.12.7",
     "markdown-to-jsx": "^7.7.4",
     "next": "^15.1.4",
     "ogl": "^1.0.11",

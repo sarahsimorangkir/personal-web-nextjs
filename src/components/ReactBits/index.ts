@@ -6,3 +6,4 @@ export { default as FuzzyText } from "./FuzzyText/FuzzyText";
 export { default as GlitchText } from "./GlitchText/GlitchText";
 export { default as Particles } from "./Particles/Particles";
 export { default as GradientText } from "./GradientText/GradientText";
+export {default as PixelTransition} from "./PixelTransition/PixelTransition"

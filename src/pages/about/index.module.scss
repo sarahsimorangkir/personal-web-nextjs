@@ -1,3 +1,106 @@
-.About{
+.About {
     margin: 17vh;
+  }
+  
+  .AboutContainer {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .ImageContainer {
+    flex: 1;
+    max-width: 350px;
+  }
+  
+  .TextContainer {
+    flex: 2;
+    color: #ffffff;
+  
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .TechStack {
+  margin-top: 2rem;
+  
+  p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+  }
 }
+
+.TechIcons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.Contact {
+  margin-top: 2rem;
+  padding: 2rem;
+  color: #fff;
+  border-radius: 1rem;
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primaryColor);;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+
+      a {
+        color: #4079ff;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  a {
+    color: #40ffaa;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+  
+  @media (max-width: 768px) {
+    .AboutContainer {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .ImageContainer {
+      max-width: 100%;
+    }
+  }
+  
