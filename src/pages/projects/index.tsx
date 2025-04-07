@@ -48,8 +48,8 @@ const Projects = () => {
                   <Image
                     src={image}
                     alt={name}
-                    layout="fill"
-                    objectFit="cover"
+                    width={500}
+                    height={300}
                     className={styles.projectImage}
                   />
                 </div>

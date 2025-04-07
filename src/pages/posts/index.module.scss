@@ -4,6 +4,18 @@
 .PostDetailPage,
 .PostPage {
   margin: 15vh;
+
+  @media (max-width: 1024px) {
+    margin: 12vh 6vw;
+  }
+
+  @media (max-width: 768px) {
+    margin: 10vh 8vw;
+  }
+
+  @media (max-width: 480px) {
+    margin: 8vh 5vw;
+  }
 }
 
 .PostPage {
@@ -25,6 +37,13 @@
     & > p {
       color: lightgrey;
     }
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -35,10 +54,9 @@
   border: 1px solid lightgrey;
   border-radius: 6px;
   padding: 10px;
-  box-shadow: none;
   width: 100%;
-  height: 100%;
   background-color: var(--secondaryColor);
+  margin-top: 1rem;
 
   & > input {
     width: 100%;
@@ -49,12 +67,6 @@
     background-color: transparent;
     color: white;
     outline: none;
-
-    &:focus {
-      outline: none;
-      box-shadow: none;
-      border: none;
-    }
 
     &::placeholder {
       color: #aaa;
