@@ -73,3 +73,48 @@
     }
   }
 }
+
+.PostDetailPage {
+  margin: 10vh auto;
+  padding: 0 10vw;
+  max-width: 800px;
+
+  @media (max-width: 768px) {
+    padding: 0 6vw;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 5vw;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+  .summary {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+  }
+
+  .imageWrapper {
+    margin: 2rem 0;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+  }
+
+  .content {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #ddd;
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+}
