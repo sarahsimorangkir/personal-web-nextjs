@@ -9,21 +9,21 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Login to heroku container registry
-      env:
-        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: echo $HEROKU_API_KEY  | docker login --username=_ --password-stdin registry.heroku.com
+      - name: Login to heroku container registry
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: echo $HEROKU_API_KEY  | docker login --username=_ --password-stdin registry.heroku.com
 
-    - name: Build, tag, and push Docker Image to heroku registry
-      run: |
-        docker build -t registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web . 
-        docker push registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
-    - name: release app
-      env:
-        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: |
-        heroku container:release web --app ${{ secrets.HEROKU_APP_NAME }}
+      - name: Build, tag, and push Docker Image to heroku registry
+        run: |
+          docker build -t registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web . 
+          docker push registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
+      - name: release app
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: |
+          heroku container:release web --app ${{ secrets.HEROKU_APP_NAME }}
