@@ -20,7 +20,7 @@ export default function PostDetailPage(props: Props) {
   return (
     <>
       <Head>
-        <title>Sarah&apos;s Web - Post Detail</title>
+        <title>{title}</title>
         <meta
           name="description"
           content={summary}
